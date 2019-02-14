@@ -3,12 +3,12 @@ node {
          checkout scm
         }
    stage('Build Image'){
-         sh 'sudo docker build -t dotnetapp:${BUILD_NUMBER} .'
-         sh 'docker tag dotnetapp:${BUILD_NUMBER} dotnetapp:latest'
+         sh 'sudo docker build -t idexcelinterns/saidotnetapp:${BUILD_NUMBER} .'
+         sh 'docker tag idexcelinterns/saidotnetapp:${BUILD_NUMBER} idexcelinterns/saidotnetapp:latest'
    }
    stage('Push Image'){
          sh 'docker login -u idexcelinterns -p kutty170065'
-         sh 'docker push dotnetapp:latest'
+         sh 'docker push idexcelinterns/saidotnetapp:latest'
    }
 }
 
