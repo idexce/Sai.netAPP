@@ -4,7 +4,7 @@ node {
         }
    stage('Build Image'){
          sh 'sudo docker build -t idexcel-interns/saidev:${BUILD_NUMBER} .'
-         sh 'docker tag idexcel-interns/Sai.netAPP:${BUILD_NUMBER} idexcelinterns/Sai.netAPP:latest'
+         sh 'docker tag idexcel-interns/sai.netAPP:${BUILD_NUMBER} idexcelinterns/sai.netAPP:latest'
    }
    stage('Push Image'){
          sh 'docker login -u idexcelinterns -p kutty170065'
