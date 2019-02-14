@@ -4,7 +4,6 @@ COPY . /app
 
 WORKDIR /app
 
-RUN ["dotnet", "build"]
 
 EXPOSE 5000/tcp
 
